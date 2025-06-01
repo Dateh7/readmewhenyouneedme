@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Read Me – When You Feel Like Crying</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .drive-line {
+      width: 100%;
+      overflow: hidden;
+      height: 40px;
+      margin-bottom: 30px;
+    }
+
+    .car {
+      animation: drive 6s linear infinite;
+      font-size: 1.5em;
+      white-space: nowrap;
+    }
+
+    @keyframes drive {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .tissue-box {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .tissue-box button {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f06292;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1em;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    .tissue-box button:hover {
+      background-color: #ec407a;
+    }
+
+    #tissue-counter {
+      margin-top: 20px;
+      font-style: italic;
+      color: #a83279;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="scrapbook">
+  <h1 class="page-title">When You Feel Like Crying </h1>
+
+  <!-- Car Animation -->
+  <div class="drive-line">
+    <div class="car">im on my way🚘</div>
+  </div>
+
+  <!-- Photo Frame -->
+  <div class="scrapbook-layout">
+    <div class="photo-frame float">
+      <img src="img/driving10.jpg" alt="Me driving to you" class="stacked-img">
+      <p class="caption">If you're crying... I'm already halfway to you.</p>
+    </div>
+
+    <div class="message-card">
+      <p>
+        If you're crying right now, please know — if I could, I'd already be on my way to you.
+        No questions, no hesitation. Just me, driving to make sure you're okay.
+      </p>
+      <p>
+        I wish I could pull you into a hug, let you cry into my shirt, and remind you that you’re never alone in anything.
+        Not when you’re sad. Not when you’re scared. Not ever.
+      </p>
+      <p>
+        I don’t care if it’s 1AM or raining or far — I’d come for you. Every time.
+        Because your tears matter to me. You matter to me.
+      </p>
+      <p>
+        So breathe for me, even just a little. Cry if you need to. And if you close your eyes, maybe you’ll feel me pulling up outside your heart, just like I always would.
+      </p>
+
+      <!-- Tissue Meter -->
+      <div class="tissue-box">
+        <button onclick="useTissue()">I used a tissue </button>
+        <p id="tissue-counter">Tissues used: 0  — Kisses owed: 0 </p>
+        <p class="caption">Send me a picture to redeem </p>
+
+      </div>
+    </div>
+  </div>
+
+  <a class="back-link" href="index.html">← Back to the scrapbook</a>
+</div>
+
+<script>
+  let tissues = 0;
+  function useTissue() {
+    tissues++;
+    document.getElementById("tissue-counter").innerText =
+      `Tissues used: ${tissues}  — Kisses owed: ${tissues} `;
+  }
+</script>
+
+</body>
+</html>

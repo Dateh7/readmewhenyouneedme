@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Read Me – When You're Bored</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="scrapbook">
+  <h1 class="page-title">When You're Bored </h1>
+
+  <div class="scrapbook-layout">
+
+    <div class="message-card">
+      <p>
+        If you're bored, then clearly something is missing — probably me.
+        But don’t worry, I've got you.
+      </p>
+      <p>
+        You could do something useful (like school work or marking)... OR you could pass time with me in spirit.
+        Because honestly, being bored is just your heart's way of asking for something fun and familiar — like us.
+      </p>
+      <p>
+        So here's something random to shake it up
+        And if that doesn't work, just text me and I'll be there.
+      </p>
+
+      <div class="bored-box">
+        <button onclick="showIdea()">Click this for something to do</button>
+        <p id="bored-output" class="caption"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <a class="back-link" href="index.html">← Back to the scrapbook</a>
+</div>
+
+<script>
+  const ideas = [
+    "Text me something totally random.",
+    "Do a Tiktok dance",
+    "Send me an Imessage game",
+    "Send me a vn singing your current favourite song",
+    "Send me a selfie",
+    "Write me a letter to keep and show me later.",
+    "Online games??????????????????????? (This is my favourite one let me know when you get it).",
+    "Ask me for a Lost update (if im still watching it_",
+    "Say my name out loud. You're welcome."
+  ];
+
+  function showIdea() {
+    const randomIndex = Math.floor(Math.random() * ideas.length);
+    document.getElementById("bored-output").innerText = ideas[randomIndex];
+  }
+</script>
+
+</body>
+</html>

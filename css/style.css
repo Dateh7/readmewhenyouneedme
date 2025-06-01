@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-image: url('../img/scrapbook-paper.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #3e3e3e;
+}
+
+.scrapbook {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cover h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2.8em;
+  color: #d63384;
+  margin-bottom: 30px;
+}
+
+.message {
+  font-size: 1.2em;
+  line-height: 1.6;
+  background-color: #fff9f9;
+  padding: 20px;
+  border-left: 6px solid #d63384;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+}
+
+.contents-title {
+  font-size: 2em;
+  margin-top: 60px;
+  color: #88498f;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.link-grid li {
+  display: flex;
+  justify-content: center;
+}
+
+.link-grid a {
+  text-decoration: none;
+  color: #fff;
+  background: #f06292;
+  padding: 12px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+.link-grid a:hover {
+  background: #ec407a;
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 60px;
+  font-style: italic;
+  text-align: center;
+  color: #666;
+  font-size: 1em;
+}
+
+.page-title {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #c94f7c;
+  text-align: center;
+}
+
+.message-card {
+  background-color: #fff9f9;
+  padding: 30px;
+  border-left: 6px solid #c94f7c;
+  border-radius: 12px;
+  box-shadow: 3px 3px 12px rgba(0,0,0,0.05);
+  font-size: 1.2em;
+  line-height: 1.7;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  font-weight: bold;
+  color: #a83279;
+  text-decoration: none;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Polaroid-style photo frame with animation and tape */
+.photo-frame {
+  margin-top: +20px;
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  padding: 10px;
+  border: 2px solid #f7cad0;
+  border-radius: 12px;
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transform: rotate(-2deg);
+  max-width: 280px;
+  animation: gentleWiggle 8s infinite ease-in-out;
+  align-self: flex-start;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 120px;
+  background-image: url('../img/selotape.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.85;
+}
+
+.caption {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.1em;
+  color: #a83279;
+  margin-top: 10px;
+}
+
+/* Animation */
+@keyframes gentleWiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.scrapbook-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+/* Already defined photo-frame and message-card will auto-fit here */
+
+.message-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: #fff9f9;
+  padding: 30px;
+  border-left: 6px solid #c94f7c;
+  border-radius: 12px;
+  box-shadow: 3px 3px 12px rgba(0,0,0,0.05);
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.float {
+  animation: floatUpDown 5s ease-in-out infinite;
+}
+
+.stacked-img {
+  width: 100%;
+  max-width: 240px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+}
+
+.bored-box {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.bored-box button {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f06292;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.bored-box button:hover {
+  background-color: #ec407a;
+}
+
+#bored-output {
+  margin-top: 20px;
+  font-style: italic;
+  color: #a83279;
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.write-box {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.write-box label {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.2em;
+  color: #a83279;
+}
+
+.write-box textarea {
+  margin-top: 10px;
+  width: 90%;
+  max-width: 400px;
+  height: 120px;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1em;
+  border: 2px solid #f7cad0;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  resize: none;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.journal-entry {
+  margin-top: 60px;
+  background-color: #fff3f8;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.journal-entry textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #f7cad0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  margin-top: 10px;
+  resize: none;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.journal-entry button {
+  background-color: #f06292;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.journal-entry button:hover {
+  background-color: #ec407a;
+}
+
+
