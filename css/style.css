@@ -307,4 +307,91 @@ footer {
   background-color: #ec407a;
 }
 
+.scrapbook-photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.photo-frame {
+  width: 180px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.photo-frame img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+
+
+.rotated-left {
+  transform: rotate(-6deg);
+}
+.rotated-right {
+  transform: rotate(6deg);
+}
+.rotated-left-small {
+  transform: rotate(-3deg);
+}
+.rotated-right-small {
+  transform: rotate(3deg);
+}
+
+.photo-frame:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 2;
+}
+
+.overthink-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.overthink-gallery.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: -20px;
+}
+
+
+.verse-box {
+  margin-top: 60px;
+  background: #fffaf2;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.verse-box h2 {
+  font-family: 'Shadows Into Light', cursive;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #7a5c4a;
+}
+
+.photo-stack {
+  display: block;
+  margin-top: 30px;
+}
+
+.photo-stack .photo-frame {
+  margin-bottom: 30px;
+}
+
+
+
 
